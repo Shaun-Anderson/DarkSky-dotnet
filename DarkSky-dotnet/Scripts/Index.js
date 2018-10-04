@@ -1,6 +1,7 @@
 ﻿// On load
 $(function () {
-	$("#calcButton").click(CalcWeather);
+	CalcWeather();
+	setInterval(function () { CalcWeather(); }, 10000);
 });
 
 // Use browsers navigator 
