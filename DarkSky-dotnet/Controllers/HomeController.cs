@@ -15,11 +15,18 @@ namespace DarkSky_dotnet.Controllers
 			return View();
 		}
 
-		public async Task<ActionResult> WeatherPost (double lat, double lon)
+		public async Task<ActionResult> GetWeather (double lat, double lon)
 		{
 			DarkSkyApi api = new DarkSkyApi("abe5243cd0a2445af3fc3f8581caa352");
-			await api.GetForcast(lat, lon);
+			DarkSkyResponse response = await api.GetForcast(lat, lon);
+
+			if(response != null)
+			{
+				return PartialView("/Views/Home/_index.cshtml", response);
+			}
+
 			return PartialView();
+
 		}
 
 	}
