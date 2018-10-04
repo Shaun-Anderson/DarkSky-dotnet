@@ -13,7 +13,7 @@ namespace DarkSky_dotnet.Models
 		public double Longitude { get; set; }
 
 		[JsonProperty(PropertyName = "timezone")]
-		public double Timezone { get; set; }
+		public string Timezone { get; set; }
 
 		[JsonProperty(PropertyName = "currently")]
 		public Data Currently { get; set; }
