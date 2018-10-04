@@ -1,10 +1,11 @@
 ﻿using System.Runtime.Serialization;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace DarkSky_dotnet.Models
 {
 	
-	[JsonConverter(typeof(DarkSkyEnumJsonConverter))]
+	[JsonConverter(typeof(StringEnumConverter))]
 	public enum Icon
 	{
 		[EnumMember(Value = null)]
