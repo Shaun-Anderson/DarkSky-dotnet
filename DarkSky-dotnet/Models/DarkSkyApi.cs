@@ -28,7 +28,7 @@ namespace DarkSky_dotnet.Models
 		/// <param name="lat"></param>
 		/// <param name="lon"></param>
 		/// <returns></returns>
-		public async Task GetForcast(double lat, double lon)
+		public async Task<DarkSkyResponse> GetForcast(double lat, double lon)
 		{
 			var requestURL = string.Format("forecast/" + APIKey + "/{0:N4},{0:N4}", lat, lon);
 			HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, requestURL);
@@ -40,7 +40,10 @@ namespace DarkSky_dotnet.Models
 			{
 				// Deserialize JSON into DarkSkyResponse object.
 				DarkSkyResponse responseObject = JsonConvert.DeserializeObject<DarkSkyResponse>(responseContent);
+				return responseObject;
 			}
+
+			return null;
 		}
 
 	}
