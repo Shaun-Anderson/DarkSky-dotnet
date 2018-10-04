@@ -146,7 +146,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DarkSky.cs" />
+    <Compile Include="Models\CurrentData.cs" />
+    <Compile Include="Models\DarkSkyApi.cs" />
+    <Compile Include="Models\DarkSkyResponse.cs" />
     <Compile Include="Models\Weather.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
