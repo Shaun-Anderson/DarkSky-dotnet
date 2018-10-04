@@ -1,0 +1,32 @@
+﻿.error-panel {
+}
+
+#weather_forecast_temp {
+	font-family: "arial";
+	color: darkgrey;
+	float: left;
+}
+
+#precipitation_winds {
+	font-family: "arial";
+	color: darkgrey;
+}
+/*This is for the location name*/
+.weather_location_name {
+	font-weight: bold;
+	font-size:16;
+}
+/*This is for the day just below the location name */
+.day {
+	font-size:10;
+}
+/*This is for the weather forecast such as Cloudy, Rainy, etc */
+.weather_forecast {
+	font-size: 10;
+}
+/*This is for the weather status icon such as Cloudy.png, Rainy.png, etc */
+.weather_status_icon {
+	float: left;
+	height: 64px;
+	width: 64px;
+}
