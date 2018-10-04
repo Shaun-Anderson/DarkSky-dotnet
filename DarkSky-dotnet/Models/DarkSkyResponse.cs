@@ -6,9 +6,6 @@ namespace DarkSky_dotnet.Models
 {
 	public class DarkSkyResponse
 	{
-		[JsonProperty(PropertyName = "currently")]
-		public CurrentData Currently { get; set; }
-
 		[JsonProperty(PropertyName = "latitude")]
 		public double Latitude { get; set; }
 
@@ -17,5 +14,18 @@ namespace DarkSky_dotnet.Models
 
 		[JsonProperty(PropertyName = "timezone")]
 		public double Timezone { get; set; }
+
+		[JsonProperty(PropertyName = "currently")]
+		public Data Currently { get; set; }
+
+		[JsonProperty(PropertyName = "minutely")]
+		public DataBlock Minutely { get; set; }
+
+		[JsonProperty(PropertyName = "hourly")]
+		public DataBlock Hourly { get; set; }
+
+		[JsonProperty(PropertyName = "daily")]
+		public DataBlock Daily { get; set; }
+
 	}
 }
