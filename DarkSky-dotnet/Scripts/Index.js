@@ -28,18 +28,5 @@ function CalcWeather() {
 }
 
 function CallToServer(lat, lon) {
-	console.log(lat + " | " + lon);
-	$.ajax({
-		type: "POST",
-		url: "Home/WeatherPost",
-		data: '{"lat": ' + lat + ',' + '"lon": ' + lon + '}',
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		success: function (response) {
-			$("#partialView").html(response);
-		},
-		failure: function (response) {
-			alert(response);
-		}
-	});
+	$("#partialView").load("/Home/GetWeather", { lat: lat, lon: lon });
 }
