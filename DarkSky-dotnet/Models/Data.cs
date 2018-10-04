@@ -10,6 +10,16 @@ namespace DarkSky_dotnet.Models
 
 		#region Temperature Values
 
+		[JsonProperty(PropertyName = "temperature")]
+		public double? Temperature { get; set; }
+		public double? TemperatureCelsius => 5.0 / 9.0 * (Temperature - 32);
+
+		[JsonProperty(PropertyName = "temperatureHigh")]
+		public double? TemperatureHigh { get; set; }
+
+		[JsonProperty(PropertyName = "temperatureLow")]
+		public double? TemperatureLow { get; set; }
+
 		[JsonProperty(PropertyName = "apparentTemperature")]
 		public double? ApparentTemperature { get; set; }
 
@@ -31,7 +41,7 @@ namespace DarkSky_dotnet.Models
 		public double? Humidity { get; set; }
 
 		[JsonProperty(PropertyName = "icon")]
-		public string Icon { get; set; }
+		public Icon Icon { get; set; }
 
 		[JsonProperty(PropertyName = "moonPhase")]
 		public double? MoonPhase { get; set; }
@@ -75,14 +85,7 @@ namespace DarkSky_dotnet.Models
 
 		#region Temperature
 
-		[JsonProperty(PropertyName = "temperature")]
-		public double? Temperature { get; set; }
 
-		[JsonProperty(PropertyName = "temperatureHigh")]
-		public double? TemperatureHigh { get; set; }
-
-		[JsonProperty(PropertyName = "temperatureLow")]
-		public double? TemperatureLow { get; set; }
 
 		#endregion
 
