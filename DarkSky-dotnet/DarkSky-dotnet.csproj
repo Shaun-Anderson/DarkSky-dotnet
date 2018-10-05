@@ -147,13 +147,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DarkSkyEnumConverter.cs" />
     <Compile Include="Models\Data.cs" />
     <Compile Include="Models\DarkSkyApi.cs" />
     <Compile Include="Models\DarkSkyResponse.cs" />
     <Compile Include="Models\DataBlock.cs" />
+    <Compile Include="Models\GoogleMapsApi.cs" />
     <Compile Include="Models\Icon.cs" />
+    <Compile Include="Models\TimeConverter.cs" />
     <Compile Include="Models\Weather.cs" />
+    <Compile Include="Models\WeatherViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
