@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace DarkSky_dotnet.Models
 {
@@ -113,32 +114,52 @@ namespace DarkSky_dotnet.Models
 		[JsonProperty(PropertyName = "apparentTemperatureHighTime")]
 		internal long? ApparentTemperatureHighTimeUnix { get; set; }
 
+		public DateTime ApparentTemperatureHighTime => TimeConverter.UnixTimeStampToDateTime(ApparentTemperatureHighTimeUnix.Value);
+
 		[JsonProperty(PropertyName = "apparentTemperatureLowTime")]
 		internal long? ApparentTemperatureLowTimeUnix { get; set; }
+
+		public DateTime ApparentTemperatureLowTime => TimeConverter.UnixTimeStampToDateTime(ApparentTemperatureLowTimeUnix.Value);
 
 		[JsonProperty(PropertyName = "precipIntensityMaxTime")]
 		internal long? PrecipIntensityMaxTimeUnix { get; set; }
 
+		public DateTime PrecipIntensityMaxTime => TimeConverter.UnixTimeStampToDateTime(PrecipIntensityMaxTimeUnix.Value);
+
 		[JsonProperty(PropertyName = "sunriseTime")]
 		internal long? SunriseTimeUnix { get; set; }
+
+		public DateTime SunriseTime => TimeConverter.UnixTimeStampToDateTime(SunriseTimeUnix.Value);
 
 		[JsonProperty(PropertyName = "sunsetTime")]
 		internal long? SunsetTimeUnix { get; set; }
 
+		public DateTime SunsetTime => TimeConverter.UnixTimeStampToDateTime(SunsetTimeUnix.Value);
+
 		[JsonProperty(PropertyName = "temperatureHighTime")]
 		internal long? TemperatureHighTimeUnix { get; set; }
+
+		public DateTime TemperatureHighTime => TimeConverter.UnixTimeStampToDateTime(TemperatureHighTimeUnix.Value);
 
 		[JsonProperty(PropertyName = "temperatureLowTime")]
 		internal long? TemperatureLowTimeUnix { get; set; }
 
+		public DateTime TemperatureLowTime => TimeConverter.UnixTimeStampToDateTime(TemperatureLowTimeUnix.Value);
+
 		[JsonProperty(PropertyName = "time")]
 		internal long TimeUnix { get; set; }
+
+		public DateTime Time => TimeConverter.UnixTimeStampToDateTime(TimeUnix);
 
 		[JsonProperty(PropertyName = "uvIndexTime")]
 		internal long? UvIndexTimeUnix { get; set; }
 
+		public DateTime UVIndexTime => TimeConverter.UnixTimeStampToDateTime(UvIndexTimeUnix.Value);
+
 		[JsonProperty(PropertyName = "windGustTime")]
 		internal long? WindGustTimeUnix { get; set; }
+
+		public DateTime WindGustTime => TimeConverter.UnixTimeStampToDateTime(WindGustTimeUnix.Value);
 
 		#endregion
 	}
