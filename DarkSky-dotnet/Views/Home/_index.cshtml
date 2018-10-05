@@ -9,32 +9,28 @@
 <div class="weatherCard">
 
 	<div style="padding:25px">
-		<div class="weather_location_name">@Model.address</div>
-		<div class="weather_forecast">@String.Format("{0}", Model.darkSky.Currently.Time.DayOfWeek) @String.Format("{0}", Model.darkSky.Currently.Time.TimeOfDay)</div>
-		<div class="weather_forecast"><span>@Model.darkSky.Currently.Summary</span></div>
+		<div class="location">@Model.address</div>
+		<div class="forcastType">@String.Format("{0}", Model.darkSky.Currently.Time.DayOfWeek) @String.Format("{0}", Model.darkSky.Currently.Time.TimeOfDay)</div>
+		<div class="forcastType"><span>@Model.darkSky.Currently.Summary</span></div>
 	</div>
 
 	<div style="padding-left:25px">
-		<canvas class="weather_status_icon" id="icon" width="64" height="64"></canvas>
+		<canvas class="forecastIcon" id="icon" width="64" height="64"></canvas>
 
 		<div style="padding-left:10px;float:left">
 			<div>
-				<div style="float:left;margin-top:-3px;font-size:64px">
-					<span class="wob_t" id="wob_tm" style="display:inline">@String.Format("{0:N0}", Model.darkSky.Currently.TemperatureCelsius)</span><span class="wob_t" id="wob_ttm" style="display:none">@Model.darkSky.Currently.Temperature</span>
+				<div class="temperature">
+					<span>@String.Format("{0:N0}", Model.darkSky.Currently.TemperatureCelsius)</span>
 				</div>
-				<div class="vk_bk wob-unit" style="float:left;font-size:16px;margin-top:6px">
-					<span class="wob_t" style="display:inline" aria-label="°Celsius" aria-disabled="true" role="button">°C</span>
-					<a href="#" style="display:none;text-decoration:none" data-metric="true" data-url="/setprefs?fheit=0&amp;sig=0_dGv9HyF-pHcIHnoNhKV6Mj3FtrQ=&amp;prev=https://www.google.com.au/search%3Fq%3Dgoogle%2Bweather%26rlz%3D1C1CHBD_en-GBAU742AU742%26pf%3Dgwoc" role="button" jsaction="wob.t" data-ved="2ahUKEwjrluGHmezdAhUm8IMKHSqhD_cQ-lswAHoECAMQAQ">
-						<span aria-label="°Celsius">°C</span>
-					</a>
-					<span class="wob_t" style="display:none;margin-left:-1px" aria-label="°Fahrenheit" aria-disabled="true" role="button">°F</span>
+				<div class="degree">
+					<span>°C</span>
 				</div>
 			</div>
 		</div>
-		<div  id="precipitation_winds" style="float:right;padding-left:5px;line-height:22px;padding-top:2px;min-width:30%">
-			<div>Precipitation: <span id="precipitation_winds">@String.Format("{0:P0}", Model.darkSky.Currently.PrecipIntensity)</span></div>
-			<div>Humidity: <span id="precipitation_winds">@String.Format("{0:P0}", Model.darkSky.Currently.Humidity)</span></div>
-			<div>Wind: <span>@Model.darkSky.Currently.WindSpeed km/h</span></div>
+		<div  class="extraData">
+			<div>Precipitation: @String.Format("{0:P0}", Model.darkSky.Currently.PrecipIntensity)</div>
+			<div>Humidity: @String.Format("{0:P0}", Model.darkSky.Currently.Humidity)</div>
+			<div>Wind:  @String.Format("{0:N0}", Model.darkSky.Currently.WindSpeedKilometers) km/h</div>
 		</div>
 	</div>
 </div>
