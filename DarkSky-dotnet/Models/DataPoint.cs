@@ -4,9 +4,11 @@ using System;
 namespace DarkSky_dotnet.Models
 {
 	/// <summary>
-	/// Class for wrapping current, minutely, hourly and daily data from Dark Sky.
+	/// Class for wrapping current, minutely, hourly and daily data from Dark Sky
+	/// More Information about Data Points can be found at the link below:
+	/// https://darksky.net/dev/docs#/dev/docs#response-format
 	/// </summary>
-	public class Data
+	public class DataPoint
 	{
 
 		#region Temperature Values
