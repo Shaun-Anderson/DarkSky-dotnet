@@ -109,6 +109,8 @@ namespace DarkSky_dotnet.Models
 		[JsonProperty(PropertyName = "windSpeed")]
 		public double? WindSpeed { get; set; }
 
+		public double? WindSpeedKilometers => (WindSpeed * 1.609344);
+
 		#endregion
 
 		#region Time Values
