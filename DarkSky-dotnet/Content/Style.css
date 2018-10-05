@@ -11,18 +11,27 @@
 	font-family: "arial";
 	color: darkgrey;
 }
+.weatherCard {
+	background-color: #f1f1f1;
+	padding: 10px;
+	border-radius: 20px;
+	overflow: hidden;
+	width:500px;
+	margin:auto
+}
+
 /*This is for the location name*/
 .weather_location_name {
 	font-weight: bold;
-	font-size:16;
+	font-size: 1.2em;
 }
 /*This is for the day just below the location name */
 .day {
-	font-size:10;
+	font-size:0.9em;
 }
 /*This is for the weather forecast such as Cloudy, Rainy, etc */
 .weather_forecast {
-	font-size: 10;
+	font-size: 1.0em;
 }
 /*This is for the weather status icon such as Cloudy.png, Rainy.png, etc */
 .weather_status_icon {
