@@ -22,7 +22,7 @@ namespace DarkSky_dotnet.Controllers
 			DarkSkyApi api = new DarkSkyApi("abe5243cd0a2445af3fc3f8581caa352");
 			model.darkSky = await api.GetForcast(lat, lon);
 
-			GoogleMapsApi googleAPI = new GoogleMapsApi("AIzaSyCM01T2NMZlHFJ05U0kRU0SPUotqWcMdzM");
+			GoogleApi googleAPI = new GoogleApi("AIzaSyCM01T2NMZlHFJ05U0kRU0SPUotqWcMdzM");
 			model.address = await googleAPI.GetAddress(lat, lon);
 
 			return PartialView("/Views/Home/_index.cshtml", model);

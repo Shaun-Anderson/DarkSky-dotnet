@@ -5,13 +5,13 @@ using System.Xml;
 
 namespace DarkSky_dotnet.Models
 {
-	public class GoogleMapsApi
+	public class GoogleApi
 	{
 		readonly string APIKey;
 		readonly Uri baseURL = new Uri("https://maps.googleapis.com/maps/api/geocode/");
 		HttpClient client = new HttpClient();
 
-		public GoogleMapsApi(string key)
+		public GoogleApi(string key)
 		{
 			this.APIKey = key;
 			client.BaseAddress = baseURL;
