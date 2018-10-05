@@ -8,7 +8,7 @@ namespace DarkSky_dotnet.Models
 	
 	public class WeatherViewModel
 	{
-		public DarkSkyResponse darkSky;
-		public string address;
+		public DarkSkyResponse darkSky { get; set; }
+		public string address { get; set; }
 	}
 }
