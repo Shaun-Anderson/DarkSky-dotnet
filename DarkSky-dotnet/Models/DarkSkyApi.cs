@@ -30,7 +30,7 @@ namespace DarkSky_dotnet.Models
 		/// <returns></returns>
 		public async Task<DarkSkyResponse> GetForcast(double lat, double lon)
 		{
-			var requestURL = string.Format("forecast/" + APIKey + "/{0:N4},{0:N4}", lat, lon);
+			var requestURL = string.Format("forecast/" + APIKey + "/{0:N4},{1:N4}", lat, lon);
 			HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, requestURL);
 			var response = await client.SendAsync(message);
 			var responseContent = await response.Content.ReadAsStringAsync();
