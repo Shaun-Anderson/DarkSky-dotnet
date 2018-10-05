@@ -16,7 +16,7 @@ namespace DarkSky_dotnet.Models
 		public string Timezone { get; set; }
 
 		[JsonProperty(PropertyName = "currently")]
-		public Data Currently { get; set; }
+		public DataPoint Currently { get; set; }
 
 		[JsonProperty(PropertyName = "minutely")]
 		public DataBlock Minutely { get; set; }
