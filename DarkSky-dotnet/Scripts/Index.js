@@ -28,6 +28,7 @@ function CalcWeather() {
 	navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
 }
 
+// Use .load to get the PartialView and load it into #partialView
 function CallToServer(lat, lon) {
 	$("#partialView").load("/Home/GetWeather", { lat: lat, lon: lon });
 }

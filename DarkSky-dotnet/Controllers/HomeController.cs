@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using DarkSky_dotnet.Models;
+using DarkSky_dotnet.Services;
 using System.Threading.Tasks;
 
 namespace DarkSky_dotnet.Controllers
@@ -15,6 +12,12 @@ namespace DarkSky_dotnet.Controllers
 			return View();
 		}
 
+		/// <summary>
+		/// Retrieves data from APIs and adds them to the view model, then returns a partial view with the model.
+		/// </summary>
+		/// <param name="lat"></param>
+		/// <param name="lon"></param>
+		/// <returns></returns>
 		public async Task<ActionResult> GetWeather (double lat, double lon)
 		{
 			WeatherViewModel model = new WeatherViewModel();

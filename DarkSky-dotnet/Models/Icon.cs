@@ -4,7 +4,9 @@ using Newtonsoft.Json.Converters;
 
 namespace DarkSky_dotnet.Models
 {
-	
+	/// <summary>
+	/// Enum to link the reieved name from DarkSky to Skycons icon naming conventions.
+	/// </summary>
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum Icon
 	{
