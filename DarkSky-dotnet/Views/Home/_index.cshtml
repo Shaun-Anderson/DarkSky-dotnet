@@ -1,26 +1,26 @@
-﻿@model DarkSky_dotnet.Models.DarkSkyResponse
+﻿@model DarkSky_dotnet.Models.WeatherViewModel
 
 <script>
 	var skycons = new Skycons({ "color": "black" });
-	skycons.add("icon", Skycons.@Model.Currently.Icon);
+	skycons.add("icon", Skycons.@Model.darkSky.Currently.Icon);
 	skycons.play();
 </script>
 
-<div id="weatherCard" style="background-color:lightgray;overflow:hidden">
+<div class="weatherCard">
 
 	<div style="padding:25px">
-		<div class="vk_gy vk_h" id="wob_loc">Berwick VIC</div>
-		<div class="vk_gy vk_sh" id="wob_dts">Thursday 4:00 pm</div>
-		<div id="wob_dcp"><span class="vk_gy vk_sh" id="wob_dc">@Model.Currently.Summary</span></div>
+		<div class="weather_location_name">@Model.address</div>
+		<div class="weather_forecast">@String.Format("{0}", Model.darkSky.Currently.Time.DayOfWeek) @String.Format("{0}", Model.darkSky.Currently.Time.TimeOfDay)</div>
+		<div class="weather_forecast"><span>@Model.darkSky.Currently.Summary</span></div>
 	</div>
 
 	<div style="padding-left:25px">
-		<canvas style="float:left;height:64px;width:64px" id="icon" width="64" height="64"></canvas>
+		<canvas class="weather_status_icon" id="icon" width="64" height="64"></canvas>
 
 		<div style="padding-left:10px;float:left">
 			<div>
 				<div style="float:left;margin-top:-3px;font-size:64px">
-					<span class="wob_t" id="wob_tm" style="display:inline">@String.Format("{0:N0}", Model.Currently.TemperatureCelsius)</span><span class="wob_t" id="wob_ttm" style="display:none">@Model.Currently.Temperature</span>
+					<span class="wob_t" id="wob_tm" style="display:inline">@String.Format("{0:N0}", Model.darkSky.Currently.TemperatureCelsius)</span><span class="wob_t" id="wob_ttm" style="display:none">@Model.darkSky.Currently.Temperature</span>
 				</div>
 				<div class="vk_bk wob-unit" style="float:left;font-size:16px;margin-top:6px">
 					<span class="wob_t" style="display:inline" aria-label="°Celsius" aria-disabled="true" role="button">°C</span>
@@ -31,10 +31,10 @@
 				</div>
 			</div>
 		</div>
-		<div style="float:right;padding-left:5px;line-height:22px;padding-top:2px;min-width:30%">
-			<div>Precipitation: <span id="wob_pp">@String.Format("{0:P0}", Model.Currently.PrecipIntensity)</span></div>
-			<div>Humidity: <span id="wob_hm">@String.Format("{0:P0}", Model.Currently.Humidity)</span></div>
-			<div>Wind: <span><span class="wob_t" id="wob_ws">@Model.Currently.WindSpeed km/h</span><span class="wob_t" style="display:none" id="wob_tws">@Model.Currently.WindSpeed mph</span></span></div>
+		<div  id="precipitation_winds" style="float:right;padding-left:5px;line-height:22px;padding-top:2px;min-width:30%">
+			<div>Precipitation: <span id="precipitation_winds">@String.Format("{0:P0}", Model.darkSky.Currently.PrecipIntensity)</span></div>
+			<div>Humidity: <span id="precipitation_winds">@String.Format("{0:P0}", Model.darkSky.Currently.Humidity)</span></div>
+			<div>Wind: <span>@Model.darkSky.Currently.WindSpeed km/h</span></div>
 		</div>
 	</div>
 </div>
