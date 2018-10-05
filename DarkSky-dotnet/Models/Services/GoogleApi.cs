@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace DarkSky_dotnet.Models
+namespace DarkSky_dotnet.Services
 {
 	public class GoogleApi
 	{

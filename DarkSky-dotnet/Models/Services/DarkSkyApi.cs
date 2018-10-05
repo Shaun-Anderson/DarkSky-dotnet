@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace DarkSky_dotnet.Models
+namespace DarkSky_dotnet.Services
 {
 	public class DarkSkyApi
 	{
