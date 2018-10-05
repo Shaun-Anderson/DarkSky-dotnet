@@ -154,7 +154,6 @@
     <Compile Include="Models\Services\GoogleApi.cs" />
     <Compile Include="Models\Icon.cs" />
     <Compile Include="Models\TimeConverter.cs" />
-    <Compile Include="Models\Weather.cs" />
     <Compile Include="Models\WeatherViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
