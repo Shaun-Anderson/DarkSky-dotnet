@@ -1,16 +1,5 @@
-﻿.error-panel {
-}
-
-#weather_forecast_temp {
-	font-family: "arial";
-	color: darkgrey;
-	float: left;
-}
-
-#precipitation_winds {
-	font-family: "arial";
-	color: darkgrey;
-}
+﻿
+/*For the whole container (card)*/
 .weatherCard {
 	background-color: #f1f1f1;
 	padding: 10px;
@@ -21,20 +10,43 @@
 }
 
 /*This is for the location name*/
-.weather_location_name {
+.location {
 	font-weight: bold;
 	font-size: 1.2em;
 }
+
+.temperature {
+	float: left;
+	margin-top: -3px;
+	font-size: 64px;
+}
+
+.degree {
+	float: left;
+	font-size: 16px;
+	margin-top: 6px
+}
+
+.extraData {
+	font-family: "arial";
+	color: darkgrey;
+	float: right;
+	padding-left: 5px;
+	line-height: 22px;
+	padding-top: 2px;
+	min-width: 30%
+}
+
 /*This is for the day just below the location name */
 .day {
 	font-size:0.9em;
 }
 /*This is for the weather forecast such as Cloudy, Rainy, etc */
-.weather_forecast {
+.forcastType {
 	font-size: 1.0em;
 }
 /*This is for the weather status icon such as Cloudy.png, Rainy.png, etc */
-.weather_status_icon {
+.forecastIcon {
 	float: left;
 	height: 64px;
 	width: 64px;
