@@ -18,7 +18,7 @@ namespace DarkSky_dotnet.Models
 		}
 
 		/// <summary>
-		/// Requests weather information from dark sky based on the latitude and longitude provided.
+		/// Requests geolocation information from google based on the latitude and longitude provided.
 		/// </summary>
 		/// <param name="lat"></param>
 		/// <param name="lon"></param>
